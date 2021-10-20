@@ -1,5 +1,7 @@
 package com.guessnumber.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,8 +17,9 @@ public class GuessNumberController {
 	@Autowired
 	private GuessNumberService guessNumberService;
 		
+	@SuppressWarnings("unchecked")
 	@PostMapping
-	public Object startGuessing(@RequestBody final UserInput userInput) {		
-		return guessNumberService.guessIt(userInput);
+	public Map<String, Object> startGuessing(@RequestBody final UserInput userInput) {		
+		return (Map<String, Object>) guessNumberService.guessIt(userInput);
 	}
 }

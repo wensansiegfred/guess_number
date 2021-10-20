@@ -4,32 +4,39 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.guessnumber.model.GuessNumber;
-import com.guessnumber.model.Message;
 import com.guessnumber.repo.GuessNumberRepository;
 
 public class ProcessNumber {
 	private final int initMin = 1;
 	private final int initMax = 100;
+	private Map<String, Object> message = new HashMap<String, Object>();
 	
-	protected Message start(GuessNumberRepository guessNumberRepository) {
+	protected Map<String, Object> start(GuessNumberRepository guessNumberRepository) {
 		int num = getMidpoint(initMin, initMax);		
 		GuessNumber guessNumber = new GuessNumber(num, initMax, initMin, 1);
 		guessNumberRepository.setNumber(guessNumber);
 		
-		return new Message(num, 1);
+		message.put("guessed_number", num);
+		message.put("attempt", 1);
+		return message;
 	}
 	
-	protected Message tryLower(GuessNumber guessNumber, GuessNumberRepository guessNumberRepository) {
+	protected Map<String, Object> tryLower(GuessNumber guessNumber, GuessNumberRepository guessNumberRepository) {
 		int num = getMidpoint(guessNumber.getMinNumber(), guessNumber.getCurrentGuessNumber() - 1);
 		guessNumberRepository.setNumber(new GuessNumber(num, guessNumber.getCurrentGuessNumber() - 1, guessNumber.getMinNumber(), guessNumber.getAttempt() + 1));
 		
-		return new Message(num, guessNumber.getAttempt() + 1);
+		message.put("guessed_number", num);
+		message.put("attempt", guessNumber.getAttempt() + 1);
+		return message;
 	}
 	
-	protected Message tryHigher(GuessNumber guessNumber, GuessNumberRepository guessNumberRepository) {
+	protected Map<String, Object> tryHigher(GuessNumber guessNumber, GuessNumberRepository guessNumberRepository) {
 		int num = getMidpoint(guessNumber.getCurrentGuessNumber() + 1, guessNumber.getMaxNumber());
 		guessNumberRepository.setNumber(new GuessNumber(num, guessNumber.getMaxNumber(), guessNumber.getCurrentGuessNumber() + 1, guessNumber.getAttempt() + 1));
-		return new Message(num, guessNumber.getAttempt() + 1);
+		
+		message.put("guessed_number", num);
+		message.put("attempt", guessNumber.getAttempt() + 1);
+		return message;
 	}
 	
 	protected Map<String, Object> gotIt(GuessNumber guessNumber) {

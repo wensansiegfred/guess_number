@@ -1,15 +1,16 @@
 package com.guessnumber.service;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
 import com.guessnumber.model.GuessNumber;
-import com.guessnumber.model.Message;
 import com.guessnumber.model.UserInput;
 import com.guessnumber.repo.GuessNumberRepository;
 
 @Service
 public class GuessNumberService extends ProcessNumber {
-	private Message message;
+	private Map<String, Object> message;
 	
 	private final GuessNumberRepository guessNumberRepository;	
 	
