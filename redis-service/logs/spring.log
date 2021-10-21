@@ -1,0 +1,24 @@
+2021-10-21 14:46:15.778  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : Starting GuessNumberApplicationTests using Java 1.8.0_202 on DESKTOP-PKOB2HV with PID 10332 (started by Simon in D:\practice\tests\guess_number)
+2021-10-21 14:46:15.779  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : No active profile set, falling back to default profiles: default
+2021-10-21 14:46:16.199  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 14:46:16.201  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 14:46:16.216  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-10-21 14:46:17.353  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : Started GuessNumberApplicationTests in 1.814 seconds (JVM running for 2.516)
+2021-10-21 14:48:00.423  INFO 16844 --- [main] c.g.GuessNumberApplicationTests          : Starting GuessNumberApplicationTests using Java 1.8.0_202 on DESKTOP-PKOB2HV with PID 16844 (started by Simon in D:\practice\tests\guess_number)
+2021-10-21 14:48:00.426  INFO 16844 --- [main] c.g.GuessNumberApplicationTests          : No active profile set, falling back to default profiles: default
+2021-10-21 14:48:00.873  INFO 16844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 14:48:00.875  INFO 16844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 14:48:00.892  INFO 16844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-10-21 14:48:02.022  INFO 16844 --- [main] c.g.GuessNumberApplicationTests          : Started GuessNumberApplicationTests in 1.837 seconds (JVM running for 2.523)
+2021-10-21 14:49:15.823  INFO 17236 --- [main] c.g.GuessNumberApplicationTests          : Starting GuessNumberApplicationTests using Java 1.8.0_202 on DESKTOP-PKOB2HV with PID 17236 (started by Simon in D:\practice\tests\guess_number)
+2021-10-21 14:49:15.825  INFO 17236 --- [main] c.g.GuessNumberApplicationTests          : No active profile set, falling back to default profiles: default
+2021-10-21 14:49:16.244  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 14:49:16.246  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 14:49:16.264  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-10-21 14:49:17.385  INFO 17236 --- [main] c.g.GuessNumberApplicationTests          : Started GuessNumberApplicationTests in 1.795 seconds (JVM running for 2.489)
+2021-10-21 14:53:19.115  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : Starting GuessNumberApplicationTests using Java 1.8.0_202 on DESKTOP-PKOB2HV with PID 10332 (started by Simon in D:\practice\tests\guess_number)
+2021-10-21 14:53:19.117  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : No active profile set, falling back to default profiles: default
+2021-10-21 14:53:19.545  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 14:53:19.547  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 14:53:19.563  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-10-21 14:53:20.679  INFO 10332 --- [main] c.g.GuessNumberApplicationTests          : Started GuessNumberApplicationTests in 1.798 seconds (JVM running for 2.482)

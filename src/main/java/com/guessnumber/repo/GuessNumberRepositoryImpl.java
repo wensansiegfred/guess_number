@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.guessnumber.model.GuessNumber;
 
 @Repository
-public class GuessNumberRepositoryImpl implements GuessNumberRepository{
+public class GuessNumberRepositoryImpl implements GuessNumberRepository {
 	
 	private final String GUESS_CACHE = "GUESS_CACHE";
 	private final String key = "GUESS_NUMBER";
