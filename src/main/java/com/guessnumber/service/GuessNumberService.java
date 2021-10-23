@@ -1,44 +1,31 @@
 package com.guessnumber.service;
 
-import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.guessnumber.model.GuessNumber;
-import com.guessnumber.model.UserInput;
+import com.guessnumber.model.UserGuessMessageAttempt;
+import com.guessnumber.model.UserGuessMessageSuccess;
 import com.guessnumber.repo.GuessNumberRepository;
 
 @Service
-public class GuessNumberService extends ProcessNumber {
-	private Map<String, Object> message;
+public class GuessNumberService extends ProcessNumber {	
 	
-	private final GuessNumberRepository guessNumberRepository;	
+	@Autowired
+	GuessNumberRepository guessNumberRepository;
 	
-	public GuessNumberService(GuessNumberRepository guessNumberRepository) {
-		this.guessNumberRepository = guessNumberRepository;
+	public UserGuessMessageAttempt startGuess() {
+		return start(guessNumberRepository);
 	}
 	
-	public Object guessIt(UserInput userInput) {
-		GuessNumber guessNumber = guessNumberRepository.getCurrent();
-		System.out.println(userInput);
-		System.out.println(guessNumber);
-		
-		switch(userInput.getAction()) {
-			case "start":
-				message = start(guessNumberRepository);
-			break;
-			case "<":
-				message = tryLower(guessNumber, guessNumberRepository);
-			break;
-			case ">":
-				message = tryHigher(guessNumber, guessNumberRepository);
-			break;
-			case "=":
-				return gotIt(guessNumber);
-			default:
-				message = null;
-		}
-		
-		return message;
+	public UserGuessMessageAttempt tryLowerGuess(GuessNumber guessNumber) {
+		return tryLower(guessNumber, guessNumberRepository);
+	}
+	
+	public UserGuessMessageAttempt tryHigherGuess(GuessNumber guessNumber) {
+		return tryHigher(guessNumber, guessNumberRepository);
+	}
+	
+	public UserGuessMessageSuccess gotItSuccess(GuessNumber guessNumber) {
+		return gotIt(guessNumber, guessNumberRepository);
 	}
 }

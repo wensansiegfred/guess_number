@@ -33,4 +33,9 @@ public class GuessNumberRepositoryImpl implements GuessNumberRepository {
 	private void intializeHashOperations() {
 		hashOperations = redisTemplate.opsForHash();
 	}
+
+	@Override
+	public void delete() {
+		hashOperations.delete(GUESS_CACHE, key);
+	}
 }
